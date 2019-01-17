@@ -9,6 +9,11 @@ func helloworld() string {
 	return ("hello world")
 }
 
+func mynewfeature() string {
+	return ("new feature!!!")
+}
+
+
 func handler() {
 	fmt.Println(helloworld())
 }
