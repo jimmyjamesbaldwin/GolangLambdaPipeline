@@ -24,7 +24,7 @@ Now we've configured Jenkins, we can setup our project and point to our repo.
     * Branch Sources > GitHub
         * Credentials > Add > Username/PAT token
         * Owner > jimmyjamesbaldwin
-        * Repository > lambda_test
+        * Repository > GolangLambdaPipeline
         * Behaviours
             * Discover branches
                 * Strategy: _Exclude branches that are also filed as PRs_
@@ -33,7 +33,7 @@ Now we've configured Jenkins, we can setup our project and point to our repo.
             * Script Path > Jenkinsfile
 
 ### Add GitHub webhooks
-To make Jenkins build automatically when code is pushed to the repo, head to GitHub > Settings > Webhooks > Payload Url: _http://jenkins_user:password@<dns_alias_of_jenkins_ec2_host>_ (in the real world don't authenticate like this...). 
+To make Jenkins build automatically when code is pushed to the repo, head to GitHub > Settings > Webhooks > Payload Url: _http://jenkins_user:password@<dns_alias_of_jenkins_ec2_host>_ (in the real world don't authenticate like this...) 
 
 Afterwards you'll see any development branches appear and attempt to build:
 ![dev branch in jenkins](https://i.imgur.com/qOHqcJO.png)
